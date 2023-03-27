@@ -29,3 +29,8 @@ brew install iterm2
 
 # Install visual studio code
 brew install visual-studio-code
+
+# Install kubectl
+brew install kubectl@1.23
+#show aws cli version installed
+kubectl version --client
