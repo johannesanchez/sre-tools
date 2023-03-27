@@ -6,13 +6,23 @@ if ! command -v brew &> /dev/null; then
 fi
 
 # Install common
-brew install jq
-
-# Install git
-brew install git
+brew install jq git wget
 
 # Install Ansible
 brew install ansible
+
+# Install Ansible
+brew install terraform
+
+# Install Python3.10
+brew install python@3.10
+#show python version installed
+python --version
+
+# Install aws cli v2
+brew install awscli
+#show aws cli version installed
+aws --version
 
 # Install iterm2
 brew install iterm2
