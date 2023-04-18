@@ -34,3 +34,6 @@ brew install visual-studio-code
 brew install kubectl@1.23
 #show aws cli version installed
 kubectl version --client
+
+# Install kustomize
+brew install kustomize
