@@ -38,5 +38,5 @@ kubectl version --client
 # Install kustomize
 brew install kustomize
 
-# Install k9s
+# Install k9s - https://github.com/derailed/k9s
 brew install derailed/k9s/k9s
