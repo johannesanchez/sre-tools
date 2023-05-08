@@ -41,5 +41,8 @@ brew install kustomize
 # Install k9s - https://github.com/derailed/k9s
 brew install derailed/k9s/k9s
 
+# Install kubeseal
+brew install kubeseal
+
 # Install bazelisk
 brew install bazelisk
