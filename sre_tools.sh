@@ -44,5 +44,8 @@ brew install derailed/k9s/k9s
 # Install kubeseal
 brew install kubeseal
 
+# Install sapling (git)
+brew install sapling
+
 # Install bazelisk
 brew install bazelisk
