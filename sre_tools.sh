@@ -49,3 +49,7 @@ brew install sapling
 
 # Install bazelisk
 brew install bazelisk
+
+#Optionals k8s
+brew install hyperkit
+brew install minikube
