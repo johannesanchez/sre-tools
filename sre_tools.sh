@@ -51,5 +51,6 @@ brew install sapling
 brew install bazelisk
 
 #Optionals k8s
+brew install istio-ctl
 brew install hyperkit
 brew install minikube
