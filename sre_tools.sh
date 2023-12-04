@@ -54,3 +54,6 @@ brew install bazelisk
 brew install istio-ctl
 brew install hyperkit
 brew install minikube
+
+#Install pluto
+brew install FairwindsOps/tap/pluto
