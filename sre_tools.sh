@@ -54,6 +54,12 @@ brew install bazelisk
 brew install istio-ctl
 brew install hyperkit
 brew install minikube
+brew install kind
+
+#KIND
+# how to create a cluster with kind: >> kind create cluster
+# confirm the default context is pointing to kind cluster: >> kubectl cluster-info
+# how to delete cluster: >> kind delete cluster
 
 #Install pluto (Optional)
 #brew install FairwindsOps/tap/pluto
