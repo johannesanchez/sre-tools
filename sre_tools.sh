@@ -52,14 +52,21 @@ brew install bazelisk
 
 #Optionals k8s
 brew install istio-ctl
-brew install hyperkit
-brew install minikube
+
+# MINIKUBE
+#brew install hyperkit
+#brew install minikube
+
 brew install kind
 
 #KIND
 # how to create a cluster with kind: >> kind create cluster
 # confirm the default context is pointing to kind cluster: >> kubectl cluster-info
 # how to delete cluster: >> kind delete cluster
+
+# KO - makes building single Go container images easy, fast, secure when no OS dependencies used.
+brew install ko
+
 
 #Install pluto (Optional)
 #brew install FairwindsOps/tap/pluto
