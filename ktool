@@ -44,6 +44,8 @@ esac
 
 kubectl logs -l serving.knative.dev/service=$app -n $app-$env --context=${cluster}.master
 echo -e "\n"
+kubectl get namespaces --context=${cluster}.master
+echo -e "\n"
 kubectl get pods -n $app-$env --context=${cluster}.master
 echo -e "\n"
 kubectl get ksvc -n $app-$env --context=${cluster}.master
@@ -52,11 +54,3 @@ kubectl get ksvc $app -n $app-$env --context=${cluster}.master -o json | jq '.st
 # kubectl get ksvc $app -n $app-$env --context=${cluster}.master -o json | jq '.status.traffic[]'
 echo -e "\n"
 kubectl get ksvc $app -n $app-$env --context=${cluster}.master -o json | jq '.spec.template.spec.containers[].image'
-
-
-# open -a Terminal.app "$SHELL" -c "$logs_cmd"
-# osascript -e "tell application \"Terminal\" to do script \"$logs_command\""
-
-# osascript -e 'tell app "Terminal"
-#     do script \"$logs"
-# end tell'
