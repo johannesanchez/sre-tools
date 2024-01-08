@@ -79,3 +79,14 @@ brew install ko
 
 #Install pluto (Optional)
 #brew install FairwindsOps/tap/pluto
+
+
+### Interesting tools:
+# IAC: Terragrunt, 
+
+# Linux, Troubleshooting: 
+  # Test ssl https://github.com/drwetter/testssl.sh
+
+# Kubernetes
+  # cost savings: karpenter https://karpenter.sh/
+  

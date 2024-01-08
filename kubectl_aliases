@@ -1,3 +1,5 @@
+# https://kubernetes.io/docs/reference/kubectl/quick-reference/
+
 # If you are using bash
 ### Include this in ~/.bashrc or ~/.bash_profile
 
@@ -6,7 +8,7 @@
 
 
 # ##### kubectl Alias
-# #get
+#get
 alias k='kubectl'
 alias kcn='kubectl get namespaces'
 alias kcp='kubectl get pods'
@@ -15,7 +17,10 @@ alias kck='kubectl get kservices'
 alias kcno='kubectl get nodes'
 
 #logs
-alias kl='kubectl logs'
+alias kl='kubectl logs -f'
 
-# #edit
+#edit
 alias kek='kubectl edit kservice'
+
+# exec
+alias kex='kubectl exec -it' # kubectl exe -it <pod> -- /bin/bash
