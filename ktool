@@ -1,0 +1,62 @@
+#!/bin/bash
+# ktool.sh
+
+# use
+#logs: ktool {service} {cluster}. Example: ktool api-loan-app rq1.
+
+# if [[ env == 'dev' ]]; then
+
+
+# # use example:
+# kubectl get -n end2end-user-abc-1234 --context=ba1.end2end
+
+# kcp abc-1234 ab1
+# kcp abc-1234 ba1
+# kcp abc-1234 bb1
+# kcp abc-1234 ab1
+
+# dev_clusters = ("ab1", "ba1", "bb1", "bt1")
+# qa_cluster = ("rq1")
+# stage_cluster = ("cf1")
+# prod_cluster = ("")
+
+
+# kcp abc-1234 dev
+
+
+
+# kl api-loan-app rq1 = kubectl logs -f $POD1
+app=$1
+cluster=$2
+case $cluster in
+    "rq1")
+    env="qa12"
+    ;;
+    "cf1")
+    env="stage1"
+    ;;
+    "hm1")
+    env=""
+    ;;
+esac
+
+
+
+kubectl logs -l serving.knative.dev/service=$app -n $app-$env --context=${cluster}.master
+echo -e "\n"
+kubectl get pods -n $app-$env --context=${cluster}.master
+echo -e "\n"
+kubectl get ksvc -n $app-$env --context=${cluster}.master
+echo -e "\n"
+kubectl get ksvc $app -n $app-$env --context=${cluster}.master -o json | jq '.status'
+# kubectl get ksvc $app -n $app-$env --context=${cluster}.master -o json | jq '.status.traffic[]'
+echo -e "\n"
+kubectl get ksvc $app -n $app-$env --context=${cluster}.master -o json | jq '.spec.template.spec.containers[].image'
+
+
+# open -a Terminal.app "$SHELL" -c "$logs_cmd"
+# osascript -e "tell application \"Terminal\" to do script \"$logs_command\""
+
+# osascript -e 'tell app "Terminal"
+#     do script \"$logs"
+# end tell'

@@ -1,0 +1,21 @@
+# If you are using bash
+### Include this in ~/.bashrc or ~/.bash_profile
+
+# If you are using zsh
+### Include this in ~/.zshrc
+
+
+# ##### kubectl Alias
+# #get
+alias k='kubectl'
+alias kcn='kubectl get namespaces'
+alias kcp='kubectl get pods'
+alias kcs='kubectl get secrets'
+alias kck='kubectl get kservices'
+alias kcno='kubectl get nodes'
+
+#logs
+alias kl='kubectl logs'
+
+# #edit
+alias kek='kubectl edit kservice'
