@@ -8,3 +8,6 @@ cp -rp ktool /usr/local/bin/
 cp -rp aliases ~/.aliases
 echo "[ -f ~/.aliases ] && source ~/.aliases" >> ~/.bash_profile
 echo "[ -f ~/.aliases ] && source ~/.aliases" >> ~/.zshrc
+
+#source ~/.bash_profile
+#source ~/.zshrc

@@ -1,0 +1,36 @@
+# https://kubernetes.io/docs/reference/kubectl/quick-reference/
+
+# If you are using bash
+### Include this in ~/.bashrc or ~/.bash_profile
+
+# If you are using zsh
+### Include this in ~/.zshrc
+
+
+# ##### kubectl Alias
+#get
+alias k='kubectl'
+alias kcn='kubectl get namespaces'
+alias kcp='kubectl get pods'
+alias kcs='kubectl get secrets'
+alias kck='kubectl get kservices'
+alias kcno='kubectl get nodes'
+
+#logs
+alias kl='kubectl logs -f'
+
+#edit
+alias kek='kubectl edit kservice'
+
+# exec
+alias kex='kubectl exec -it' # kubectl exe -it <pod> -- /bin/bash
+
+#github alias
+alias gd='git diff'
+alias gs='git status'
+alias ga='git add .' # ga ####
+alias gc='git commit -am ' # gc "my commit message" ####
+alias gam='git commit --amend --no-edit' # gam ####
+alias gams='git commit --amend --no-edit -S' # gams
+alias gck='git checkout '
+alias gp='git push origin $(git rev-parse --abbrev-ref HEAD) -f' ####
