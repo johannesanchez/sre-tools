@@ -78,6 +78,7 @@ brew install ko
 
 # Install ohhmyzsh (very good tool with many plugins & alias)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# During the installation you will be asked if you want to use zsh by default. On my case I said NO, I want to keep using bash and when I want to use zsh, just type `zsh`.
 
 #Install pluto (Optional)
 #brew install FairwindsOps/tap/pluto
