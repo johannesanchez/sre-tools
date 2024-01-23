@@ -76,6 +76,8 @@ brew install kind
 # KO - makes building single Go container images easy, fast, secure when no OS dependencies used.
 brew install ko
 
+# Install ohhmyzsh (very good tool with many plugins & alias)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #Install pluto (Optional)
 #brew install FairwindsOps/tap/pluto
