@@ -11,7 +11,10 @@ https://medium.com/circuitpeople/aws-cli-with-jq-and-bash-9d54e2eabaf1
 
 aws ce get-cost-and-usage --time-period Start=$(date -v1d -v-1m "+%Y-%m-%d"),End=$(date "+%Y-%m-%d") --granularity MONTHLY --metrics "BlendedCost" --group-by Type=DIMENSION,Key=SERVICE --output json | jq '.ResultsByTime[].Groups[] | {Service: .Keys[0], Cost: .Metrics.BlendedCost.Amount}' | jq '.'
 
+### CERTIFICATES
 
+* Get the CA authorities from CA file (.crt, .pem)
+openssl crl2pkcs7 -nocrl -certfile /{path}/ca-certificates.crt | openssl pkcs7 -print_certs -noout
 
 ### JAVA
 # Find Java Heap Memory Size
