@@ -14,7 +14,7 @@ aws ce get-cost-and-usage --time-period Start=$(date -v1d -v-1m "+%Y-%m-%d"),End
 ### CERTIFICATES
 
 * Get the CA authorities from CA file (.crt, .pem)
-openssl crl2pkcs7 -nocrl -certfile /{path}/ca-certificates.crt | openssl pkcs7 -print_certs -noout
+`openssl crl2pkcs7 -nocrl -certfile /{path}/ca-certificates.crt | openssl pkcs7 -print_certs -noout`
 
 * Test https destination using curl and the CAcert file
 `curl --cacert /etc/ssl/certs/private-ca/oportun-cacert.pem  https://online-origination.1.app.stage.pfops.com`
