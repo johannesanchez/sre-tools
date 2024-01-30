@@ -68,6 +68,9 @@ brew install istio-ctl
 
 brew install kind
 
+# Install Kyverno CLI
+brew install kyverno
+
 #KIND
 # how to create a cluster with kind: >> kind create cluster
 # confirm the default context is pointing to kind cluster: >> kubectl cluster-info
