@@ -231,4 +231,16 @@ spec:
         autoscaling.knative.dev/target: "150"
 
 
+--> some other examples of knative autoscaling options
+scaling based on concurrency:
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/metric: "concurrency"
+        autoscaling.knative.dev/target-utilization-percentage: "70" 
 
+scaling based on concurrency:
+        autoscaling.knative.dev/class: "hpa.autoscaling.knative.dev"
+        autoscaling.knative.dev/metric: "cpu"
+        autoscaling.knative.dev/target: "100"
